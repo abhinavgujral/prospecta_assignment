@@ -1,3 +1,23 @@
+Question1 :
+  what are the key things you would consider when creating/consuming an API to
+        ensure that it is secure and reliable?
+
+        1. API Structure -->API should follow a correct namimg conventions
+        2. Version  --> API should also follow the versioning of the system
+        3. Security  --> API should be able to Authenticate and Authorize correctly
+        4. Validation --> API should validate the data that is given by the user
+        5. Rate limit --> API should limit the rate for an particular API's
+        6. Error Handling --> Customize Error Handling Should be done in human readdable form.
+
+
+
+
+
+
+
+
+Theoretical
+Question 2:
 I want a program that will take the CSV input above and produce CSV output with the results.  If it is a value, then return a value. 
 If it is a formula then calculate the formula and return the value of that formula.
  
