@@ -1,0 +1,34 @@
+I want a program that will take the CSV input above and produce CSV output with the results.  If it is a value, then return a value. 
+If it is a formula then calculate the formula and return the value of that formula.
+ 
+
+
+
+Q1. How will you tackle the challenge above?
+
+Ans:- To tackle this we can
+1--> we can read the csv file in by passing the path of the file in java FileReader class in java and get the whole data in the form of string
+2--> we can split the string we got in step 1 by using string.split(",")
+3--> once we get the seperated string we can check if this value is a formula or not we can do it by verifying if this string starts from "="
+4--> if it contains formula then we can write a logic to evaluate the same and add that evaluated value to output string
+5--> if doesn't contains the formula ( i.e value doesn't start from "=") we simply add old value to the output string. 
+6--> Now we can write the generated string into the CSV file by adding the delimeter to it as in the format of csv file.
+7--> we can write this output string to new csv file
+
+
+2. What type of errors you would you check for?
+
+Ans:- Errors that we can encounter are:-
+1. Invalid data in CSV file
+2. Invalid formula in a cell
+3.Arithematic Expression
+4. FileNotFound Exception
+
+
+
+3. How might a user break your code?
+Ans:-> user can break this code by :-
+      1. invalid data
+      2. by dividing by zero
+      3. giving wrong file path
+      
