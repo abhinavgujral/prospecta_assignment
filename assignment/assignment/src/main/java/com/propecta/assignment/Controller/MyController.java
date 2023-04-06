@@ -39,14 +39,27 @@ public class MyController {
 
     @Autowired
     MyService myService;
+
+    /*
+    URI--> /category
+    What API does--> Get the list of entries based on category
+    PathVariable--> category (type String)
+    Response-->  List of entry title & description
+     */
     @GetMapping("/{category}")
     public ResponseEntity<List<CustomResponseDto>> getByCategory(@PathVariable String category) throws EntryException {
         return new ResponseEntity<List<CustomResponseDto>>(myService.getByCategory(category), HttpStatus.OK);
     }
-    @PostMapping("/entries")
-    public ResponseEntity<String> insertEntryHandler(@RequestBody Entry entry) throws EntryException{
 
-        return new ResponseEntity<String>(myService.saveEntry(entry),HttpStatus.CREATED);
+    /*
+URI--> /entries
+What API does--> Get the list of entries  from give URI and persist them in DB
+Response--> String confirming values has been added
+ */
+    @PostMapping("/entries")
+    public ResponseEntity<String> insertEntryHandler() throws EntryException{
+
+        return new ResponseEntity<String>(myService.saveEntry(),HttpStatus.CREATED);
     }
 
 

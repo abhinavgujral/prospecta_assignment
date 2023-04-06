@@ -1,6 +1,6 @@
 package com.propecta.assignment.DTO;
 
-import com.propecta.assignment.Entity.Entry;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

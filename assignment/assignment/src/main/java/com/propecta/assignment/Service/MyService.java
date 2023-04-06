@@ -36,7 +36,7 @@ public class MyService {
 
     }
 
-    public String saveEntry(Entry entry) {
+    public String saveEntry() {
 
         CustomDataDTO customDataDTO=  new RestTemplate().getForObject("https://api.publicapis.org/entries", CustomDataDTO.class);
         List<Entry> entries= customDataDTO.getEntries();
